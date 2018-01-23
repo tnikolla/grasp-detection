@@ -1,0 +1,13 @@
+http://pr.cs.cornell.edu/grasping/rect_data/temp/data00.tar.gz
+http://pr.cs.cornell.edu/grasping/rect_data/temp/data01.tar.gz
+http://pr.cs.cornell.edu/grasping/rect_data/temp/data02.tar.gz
+http://pr.cs.cornell.edu/grasping/rect_data/temp/data03.tar.gz
+http://pr.cs.cornell.edu/grasping/rect_data/temp/data04.tar.gz
+http://pr.cs.cornell.edu/grasping/rect_data/temp/data05.tar.gz
+http://pr.cs.cornell.edu/grasping/rect_data/temp/data06.tar.gz
+http://pr.cs.cornell.edu/grasping/rect_data/temp/data07.tar.gz
+http://pr.cs.cornell.edu/grasping/rect_data/temp/data08.tar.gz
+http://pr.cs.cornell.edu/grasping/rect_data/temp/data09.tar.gz
+http://pr.cs.cornell.edu/grasping/rect_data/temp/data10.tar.gz
+http://pr.cs.cornell.edu/grasping/rect_data/backgrounds.zip
+http://pr.cs.cornell.edu/grasping/rect_data/processedData.zip
