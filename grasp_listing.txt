@@ -1,4 +1,3 @@
-http://pr.cs.cornell.edu/grasping/rect_data/temp/data00.tar.gz
 http://pr.cs.cornell.edu/grasping/rect_data/temp/data01.tar.gz
 http://pr.cs.cornell.edu/grasping/rect_data/temp/data02.tar.gz
 http://pr.cs.cornell.edu/grasping/rect_data/temp/data03.tar.gz
