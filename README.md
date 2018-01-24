@@ -12,7 +12,7 @@ The images used to train the network are from [Cornell Grasping Dataset](http://
 
 Having in mind a parallel plate griper before it closes, a simple and natural way of picturing the grasping position in an image would be a rectangle (see figure 1).
 
-One way representing it uniquely is as 
+One way representing it uniquely is as
 
     g = {x, y, \theta, h, w}
 
@@ -32,7 +32,7 @@ The procedure follows these steps:
   - convert the grasping dataset in TFRecords
   - train on the grasping dataset using the pretrained weights
 
-### Prepering Imagenet
+### Preparing Imagenet
 
 Before running the script you will need to download and convert the ImageNet data to native TFRecord format. Check this [link](https://github.com/tensorflow/models/tree/master/research/inception#getting-started) from the Inception model from Google. I found the whole Inception model in Github very useful.
 
@@ -44,13 +44,13 @@ Check also in the end of the file the options that you can use, for example:
 
     ./imagenet_classifier.py --batch_size=128 --model_path=./models/imagenet/m1/m1.ckpt --train_or_validation=train
 
-Running on a GTX 980 and a very^2 good Xeon it needs around two days (I didn't time it). Check in the begining if the model is saving/restoring the weights. 
+Running on a GTX 980 and a very^2 good Xeon it needs around two days (I didn't time it). Check in the begining if the model is saving/restoring the weights.
 
-### Prepering Cornell grasping dataset
+### Preparing Cornell Grasping Dataset
 
-After downloading and decompressing run `build_cgd_dataset.py`. Make sure to adapt to your needs the python file, for example 
+After downloading and decompressing run `build_cgd_dataset.py`. Make sure to adapt to your needs the python file, for example
 
-  - point `dataset` in the right place 
+  - point `dataset` in the right place
   - in `filename[:49]` adapt the number 49 (you can contribute, or I will program it better someday)
 
 ### Train on grasping dataset
