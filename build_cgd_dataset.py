@@ -39,21 +39,6 @@ from tensorflow.python.keras._impl.keras.utils.data_utils import _hash_file
 import keras
 from keras import backend as K
 
-# TODO(ahundt) importing moviepy prevented python from exiting, uncomment lines when fixed.
-# try:
-#     import moviepy.editor as mpy
-# except ImportError:
-#     print('moviepy not available, try `pip install moviepy`. '
-#           'Skipping dataset gif extraction components.')
-
-# TODO(ahundt) these are from the google brain grasping dataset
-# import grasp_geometry
-# import grasp_geometry_tf
-# import depth_image_encoding
-# import random_crop as rcp
-# import inception_preprocessing
-# from grasp_median_filter import grasp_dataset_median_filter
-
 
 flags.DEFINE_string('data_dir',
                     os.path.join(os.path.expanduser("~"),
