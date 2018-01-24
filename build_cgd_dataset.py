@@ -63,7 +63,6 @@ flags.DEFINE_string('data_dir',
 flags.DEFINE_string('grasp_dataset', 'all', 'TODO(ahundt): integrate with brainrobotdata or allow subsets to be specified')
 flags.DEFINE_boolean('grasp_download', True,
                      """Download the grasp_dataset to data_dir if it is not already present.""")
-dataset = '/root/dataset/cornell_grasping_dataset'
 
 FLAGS = flags.FLAGS
 
@@ -96,24 +95,9 @@ def is_sequence(arg):
 
 class GraspDataset(object):
     """Cornell Grasping Dataset - about 5GB total size
+        http:pr.cs.cornell.edu/grasping/rect_data/data.php
 
-
-        Downloads to `~/.keras/datasets/grasping` by default.
-
-        grasp_listing.txt lists all the files in all grasping datasets;
-        *.csv lists the number of features, the number of grasp attempts, and all feature names;
-        *.tfrecord and *.tfrecord*-of-* is the actual data stored in the tfrecord.
-
-        If you are using this for the first time simply select the dataset number you would like, such as
-        102 in the constructor, and then call `get_training_tensors()`. This will give
-        you tensorflow tensors for the original dataset configuration and parameterization. Then initialize
-        your model with the tensors and train or predict.
-
-        For analysis and visualization of the dataset use `get_training_dictionaries()`,
-        this contains both the raw features stored on disk and preprocessed features needed to visualize
-        the dataset in detail. Also see `vrep_grasp.py` to visualize the dataset.
-
-        This interface only supports one dataset at a time (aka 102 feature version or 057).
+        Downloads to `~/.keras/datasets/cornell_grasping` by default.
 
         # Arguments
 
@@ -121,15 +105,7 @@ class GraspDataset(object):
             (aka Example protobufs) and feature csv files.
              `~/.keras/datasets/grasping` by default.
 
-        dataset: Filter the subset of 1TB Grasp datasets to run.
-            None by default, which loads the data specified by the tf flag
-            grasp_dataset command line parameter.
-            'all' will run all datasets in data_dir.
-            '052' and '057' will download the small starter datasets.
-            '102' will download the main dataset with 102 features,
-            around 110 GB and 38k grasp attempts.
-            See https://sites.google.com/site/brainrobotdata/home
-            for a full listing.
+        dataset: 'all' to load all the data.
 
         download: True to actually download the dataset, also see FLAGS.
     """
@@ -147,10 +123,11 @@ class GraspDataset(object):
         self.verbose = verbose
 
     def download(self, data_dir=None, dataset='all'):
-        '''Google Grasping Dataset - about 1TB total size
-        https://sites.google.com/site/brainrobotdata/home/grasping-dataset
+        '''Cornell Grasping Dataset - about 5GB total size
 
-        Downloads to `~/.keras/datasets/grasping` by default.
+        http:pr.cs.cornell.edu/grasping/rect_data/data.php
+
+        Downloads to `~/.keras/datasets/cornell_grasping` by default.
         Includes grasp_listing.txt with all files in all datasets;
         the feature csv files which specify the dataset size,
         the features (data channels), and the number of grasps;
